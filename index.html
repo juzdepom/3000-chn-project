@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Stock Trader</title>
+    <title>3000 Characters</title>
+    <script type="text/javascript" src="./data.js"></script>
+    <script type="text/javascript" src="./fileSaver.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
@@ -11,3 +13,33 @@
     <script src="/dist/build.js"></script>
   </body>
 </html>
+
+<script>
+  var array = []
+  for(i=0; i<data.length; i++){
+    // console.log(i)
+    var str = data[i]
+    str = str.split('||')
+    str.pop()
+    str.shift()
+    const obj = {
+      "rank":parseInt(str[0]),
+      "character":str[1],
+      "pinyin":str[2],
+      "english":str[3],
+      "chnEg":(str[4]=="nil")? null : str[4],
+      "engEg":(str[5]=="nil")? null : str[5],
+    }
+    array.push(obj)
+    // console.log(obj)
+    // console.log(data[i])
+  }
+
+  function createTxtFile(data){
+    var str = JSON.stringify(data, null, 2);
+  	var blob = new Blob([str], {type: "text/plain;charset=utf-8"});
+  	saveAs(blob, "file.txt");
+  }
+
+
+</script>
