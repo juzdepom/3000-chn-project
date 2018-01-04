@@ -1,4 +1,4 @@
-global const ONE_THOUSAND = [
+const ONE_THOUSAND = [
   {
     "rank": 1,
     "character": "的",

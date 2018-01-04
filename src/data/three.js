@@ -1,4 +1,4 @@
-global const THREE_THOUSAND = [
+const THREE_THOUSAND = [
   {
     "rank": 2001,
     "character": "妥",
@@ -3999,7 +3999,6 @@ global const THREE_THOUSAND = [
     "chnEg": null,
     "engEg": null
   },
-  [
   {
     "rank": 2501,
     "character": "摧",

@@ -1,4 +1,4 @@
-global const TWO_THOUSAND = [
+const TWO_THOUSAND = [
   {
     "rank": 1001,
     "character": "协",
